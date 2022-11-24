@@ -10,7 +10,7 @@ public class MySPv1 {
         SharedPreferences preferences = context.getSharedPreferences(DB_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putInt(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static int getInt(Context context, String key, int defValue) {
@@ -22,7 +22,7 @@ public class MySPv1 {
         SharedPreferences preferences = context.getSharedPreferences(DB_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(key, value);
-        editor.commit();
+        editor.apply();
     }
 
     public static String getString(Context context, String key, String defValue) {
